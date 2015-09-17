@@ -1,5 +1,5 @@
 # e24-settings-framework
-Allows developers to add options easier. Based on Wordpress Settings API.
+Helps Wordpress plugin developers to add options easier. Based on Wordpress Settings API.
 
 The purpose of this code snippet is to make the process of adding options to your Wordpress plugins and themes easier while still being based on the Settings API. In order to use it include e24-settings-framework.php file into your theme's functions.php or into the main plugin's file. The settigns are simple, you pass them when instantiating the E24_Settings_Framework class which acceps two arguments:
 
