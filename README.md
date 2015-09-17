@@ -8,31 +8,31 @@ $settings
 
   $settings['prefix'] (string)(required): 
   A unique prefix added to the option names and in some other places
-  
+
   $settings['menu_page'] (string)(required): 
   The parent menu page under which the current options page will be added. See possible options here https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
-  
+
   $settings['menu_title'] (string)(required):
   The text to be used for the menu link.
-  
+
   $settings['page_title'] (string)(required):
   The text to be displayed in the title tags of the page when the menu is selected.
-  
+
   $settings['btn_title'] (string)(required):
   The title to be displayed in the submit button.
-  
+
 $sections
 --------------------------------------  
 
   $sections['section_id']['title'] (string)(required):
   The name of the section.
-  
+
   $sections['section_id']['description'] (string)(optional):
   The description of the section. Can be empty or not set at all.
-  
+
   $sections['section_id']['fields']['field_id']['type'] (string)(required):
   The type of the input. Available values are: 'text', 'textarea', 'select', 'checkbox'.
-  
+
   $sections['section_id']['fields']['field_id']['title'] (string)(required):
   The title of the input to be used in the label tag.
 
