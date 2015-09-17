@@ -10,7 +10,8 @@ $settings
       A unique prefix added to the option names and in some other places
 
     $settings['menu_page'] (string)(required):
-      The parent menu page under which the current options page will be added. See possible options here         https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
+      The parent menu page under which the current options page will be added. 
+      See possible options here https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
 
     $settings['menu_title'] (string)(required):
       The text to be used for the menu link.
