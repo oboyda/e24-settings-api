@@ -1,6 +1,6 @@
 <?php
 /*
- * E24 Settings Framework 1.0
+ * E24 Settings Framework 1.0.1
  * Authored by Oleksiy Boyda
  * This code is based on Wordpress Settings API.
  * Make required changes and include this file to your theme or plugin.
@@ -67,7 +67,7 @@ class E24_Settings_Framework {
 	var $sections;
 	var $page_slug;
 	var $settings_group;
-	var $lang = '_en';
+	var $lang;
 
 	function __construct($settings, $sections){
 		$this->settings = $settings;
@@ -75,6 +75,7 @@ class E24_Settings_Framework {
 
 		$this->page_slug = $this->settings['prefix'] . 'page';
 		$this->settings_group = $this->settings['prefix'] . 'settings_group';
+		$this->lang = $this->define_lang();
 
 		add_action('plugins_loaded', array($this, 'define_lang'));
 		add_action('admin_menu', array($this, 'add_submenu_page'));
@@ -83,10 +84,11 @@ class E24_Settings_Framework {
 
 	function define_lang(){
 		if(defined('ICL_LANGUAGE_CODE')){
-			$this->lang = '_' . ICL_LANGUAGE_CODE;
+			return '_' . ICL_LANGUAGE_CODE;
 		}else{
-			$this->lang = '_' . substr(get_locale(), 0, 2);
+			return '_' . substr(get_locale(), 0, 2);
 		}
+		return '_en';
 	}
 
 	private function get_option_full_id($id){
