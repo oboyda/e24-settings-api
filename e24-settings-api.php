@@ -11,8 +11,8 @@ $e24_settings = new E24_Settings_API(
 	array(
 		'prefix' => 'e24_',
 		'menu_page' => 'options-general.php', // https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
-		'menu_title' => __('E24 Settings API', 'e24'),
-		'page_title' => __('E24 Settings API', 'e24'),
+		'menu_title' => __('E24 Settings', 'e24'),
+		'page_title' => __('E24 Settings', 'e24'),
 		'btn_title' => __('Update settings', 'e24')
 	),
 	array(
