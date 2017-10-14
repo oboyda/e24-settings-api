@@ -1,18 +1,18 @@
 <?php
 /*
- * E24 Settings Framework 1.0.1
+ * E24 Settings API 1.0.1
  * Authored by Oleksiy Boyda
  * This code is based on Wordpress Settings API.
  * Make required changes and include this file to your theme or plugin.
  * To get a value call $e24_settings->get_option($name) or e24_get_option($name).
  */
 
-$e24_settings = new E24_Settings_Framework(
+$e24_settings = new E24_Settings_API(
 	array(
 		'prefix' => 'e24_',
 		'menu_page' => 'options-general.php', // https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
-		'menu_title' => __('E24 Settings Framework', 'e24'),
-		'page_title' => __('E24 Settings Framework', 'e24'),
+		'menu_title' => __('E24 Settings API', 'e24'),
+		'page_title' => __('E24 Settings API', 'e24'),
 		'btn_title' => __('Update settings', 'e24')
 	),
 	array(
@@ -61,7 +61,7 @@ function e24_get_option($name){
 	return $e24_settings->get_option($name);
 }
 
-class E24_Settings_Framework {
+class E24_Settings_API {
 
 	var $settings;
 	var $sections;
